@@ -58,7 +58,7 @@ export default {
                     username: this.username,
                     password: this.password
                 }
-                axios.post('http://localhost:7000/register',body)
+                axios.post('https://hkoverflow.gladysefirina.website/register',body)
                 .then(user=>{
                     console.log("USERNYA DAPET GA",user)
                     this.$router.push('/login')

@@ -60,7 +60,7 @@ export default {
                     'auth': localStorage.getItem('token')
                 } 
             };
-            axios.delete(`http://localhost:7000/post/delete/${postid}`,config)
+            axios.delete(`https://hkoverflow.gladysefirina.website/post/delete/${postid}`,config)
             .then(({data})=>{
                 console.log("DATA KALO BERHASIL DELETE",data)
                 window.location.reload()
@@ -77,7 +77,7 @@ export default {
                 } 
             };
             console.log(config)
-            axios.put(`http://localhost:7000/post/addlike/${postid}`,{userid:localStorage.getItem('userid')},config)
+            axios.put(`https://hkoverflow.gladysefirina.website/post/addlike/${postid}`,{userid:localStorage.getItem('userid')},config)
             .then(({data})=>{
                 console.log("DATA DI ADD LIKE",data)
                 this.getPosts()
@@ -94,7 +94,7 @@ export default {
                 } 
             };
             console.log(config)
-            axios.put(`http://localhost:7000/post/addDislike/${postid}`,{userid:localStorage.getItem('userid')},config)
+            axios.put(`https://hkoverflow.gladysefirina.website/post/addDislike/${postid}`,{userid:localStorage.getItem('userid')},config)
             .then(({data})=>{
                 console.log("DATA DI ADD LIKE",data)
                 this.getPosts()

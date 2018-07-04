@@ -22,7 +22,7 @@ export default new Vuex.Store({
   },
   actions: {
     getPosts({commit}){
-      axios.get('http://localhost:7000/post/get')
+      axios.get('https://hkoverflow.gladysefirina.website/post/get')
       .then(({data})=>{
         commit('getAllPosts',data)
         console.log("GET ALL POSt",data)
@@ -32,7 +32,7 @@ export default new Vuex.Store({
       })
     },
     getDetails({commit},payload){
-      axios.get(`http://localhost:7000/post/getpost/${payload}`)
+      axios.get(`https://hkoverflow.gladysefirina.website/post/getpost/${payload}`)
       .then(({data})=>{
         console.log(data)
         commit('getPostById',data)

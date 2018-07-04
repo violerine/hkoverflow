@@ -64,7 +64,7 @@ export default {
         },
         detailPost(){
             var param = this.$route.params.id
-               axios.get(`http://localhost:7000/post/getpost/${param}`)
+               axios.get(`https://hkoverflow.gladysefirina.website/post/getpost/${param}`)
                 .then(({data})=>{
                    this.detail=data 
                    console.log("DETAILPOST",data)
@@ -75,7 +75,7 @@ export default {
         },
         getComment(){
             var param = this.$route.params.id
-            axios.get(`http://localhost:7000/comment/${param}`)
+            axios.get(`https://hkoverflow.gladysefirina.website/comment/${param}`)
                 .then(({data})=>{
                    this.allComments=data 
                    console.log("ALL COMMENTS GET COMMENTS",this.allComments)
@@ -90,7 +90,7 @@ export default {
                     'auth': localStorage.getItem('token')
                     }
             }
-            axios.post("http://localhost:7000/comment/new",{
+            axios.post("https://hkoverflow.gladysefirina.website/comment/new",{
                 userid:localStorage.getItem('userid'),
                 postid:this.$route.params.id,
                 content:this.myHTML

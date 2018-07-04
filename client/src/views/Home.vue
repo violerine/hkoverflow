@@ -110,7 +110,7 @@ export default {
           } 
         };
         console.log("KE SET GA ",localStorage.getItem('userid'))
-        axios.post('http://localhost:7000/post/add',{
+        axios.post('https://hkoverflow.gladysefirina.website/post/add',{
           title:this.title,
           userid:localStorage.getItem('userid'),
           content:this.myHTML

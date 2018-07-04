@@ -46,7 +46,7 @@ export default {
             console.log("KETRIGGER GA")
             let params = this.$route.params.id
             console.log("params",params)
-            axios.delete(`http://localhost:7000/comment/delete/${postid}`)
+            axios.delete(`https://hkoverflow.gladysefirina.website/comment/delete/${postid}`)
             .then(({data})=>{
                 console.log("DATA DELETE COMMENT",data)
                 window.location.reload()

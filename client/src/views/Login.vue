@@ -55,7 +55,7 @@ export default {
                     swal('Both username and password required ')
                 }else{
                 console.log("MASUK LOGIN SINI GA")
-                axios.post('http://localhost:7000/login',{
+                axios.post('https://hkoverflow.gladysefirina.website/login',{
                     username :this.username,
                     password :this.password 
                 })
@@ -81,14 +81,14 @@ export default {
             console.log("NAME",name)
             console.log("USERNAME",username)
             console.log("PASSWORD",password)
-            axios.post('http://localhost:7000/register', {
+            axios.post('https://hkoverflow.gladysefirina.website/register', {
                 name:name,
                 username:username,
                 password:password
             })
             .then(({data})=>{
                 console.log("DATA PAS REGISTER",data)
-                axios.post('http://localhost:7000/login',{
+                axios.post('https://hkoverflow.gladysefirina.website/login',{
                                 username:username,
                                 password:password
                             })
@@ -112,7 +112,7 @@ export default {
         },
         checkUserExists(username,password,name){
             let self=this
-            axios.get(`http://localhost:7000/${username}`)
+            axios.get(`https://hkoverflow.gladysefirina.website/${username}`)
                     .then(({data})=>{
                         console.log("USERNAME DI CHECK USER ",username)
                         console.log("PASSWORD DI CHECK USER",password)
@@ -123,7 +123,7 @@ export default {
                         }
                         else{
                             console.log("MASUK LOGIN ELSE")
-                            axios.post('http://localhost:7000/login',{
+                            axios.post('https://hkoverflow.gladysefirina.website/login',{
                                 username:username,
                                 password:password
                             })
